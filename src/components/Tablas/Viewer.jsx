@@ -1,4 +1,4 @@
-import { StyledTabla, StyledCelda } from './StyledTabla'
+import { StyledTabla, StyledCelda } from './Tabla'
 
 const TablaViewer = () => {
   return (

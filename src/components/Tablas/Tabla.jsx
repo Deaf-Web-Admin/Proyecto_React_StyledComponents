@@ -1,7 +1,15 @@
-import StyledTabla from './StyledTabla'
+import { DivTabla, DivCelda } from './StyledTabla'
 
-const Tabla = ({ children, primary }) => {
-  return <StyledTabla primary={primary}>{children}</StyledTabla>
+const StyledTabla = ({ children, cantceldas }) => {
+  return (<DivTabla cantceldas={cantceldas}>
+        {children}
+        </DivTabla>)
 }
 
-export default Tabla
+const StyledCelda = ({ children, tipo, fondo }) => {
+  return (<DivCelda tipo={tipo} fondo={fondo}>
+      {children}
+      </DivCelda>)
+}
+
+export { StyledTabla, StyledCelda }

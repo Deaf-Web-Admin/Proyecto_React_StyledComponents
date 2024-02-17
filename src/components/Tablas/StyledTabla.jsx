@@ -30,13 +30,6 @@ flex-wrap:wrap;
 align-items:center;
 justify-content:center;
 `
-
-const StyledTabla = ({ children, cantceldas }) => {
-  return (<DivTabla cantceldas={cantceldas}>
-        {children}
-        </DivTabla>)
-}
-
 const DivCelda = styled.div`
 width:100px;
 text-align:${(props) =>
@@ -82,10 +75,4 @@ background:${(props) =>
       };
   }`
 
-const StyledCelda = ({ children, tipo, fondo }) => {
-  return (<DivCelda tipo={tipo} fondo={fondo}>
-        {children}
-        </DivCelda>)
-}
-
-export { StyledTabla, StyledCelda }
+export { DivTabla, DivCelda }
