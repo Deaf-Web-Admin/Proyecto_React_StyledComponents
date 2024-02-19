@@ -1,4 +1,4 @@
-import { DivNav, DivNavItem, DivIcon } from './StyledSideNav'
+import { DivNav, DivNavItem } from './StyledSideNav'
 
 const StyledNav = ({ children, modo }) => {
   return (<DivNav modo={modo}>
@@ -11,8 +11,4 @@ const StyledNavItem = ({ children, modo, disabled }) => {
         </DivNavItem>)
 }
 
-const StyledIcon = ({ modo }) => {
-  return (<DivIcon modo={modo}></DivIcon>)
-}
-
-export { StyledNav, StyledNavItem, StyledIcon }
+export { StyledNav, StyledNavItem }

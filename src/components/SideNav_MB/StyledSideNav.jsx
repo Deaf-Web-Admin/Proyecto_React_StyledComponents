@@ -39,7 +39,7 @@ justify-content:center;
 background:${(props) =>
   props.modo === 'night'
   ? 'var(--general90)'
-  : 'white'
+  : 'var(--general30)'
   };
 `
 
@@ -77,23 +77,22 @@ color:${(props) =>
 img{
   width:20px;
   height:20px;
+  filter:inherit;
 }  
   &:hover{
+img{      filter: ${(props) =>
+        props.modo === 'night'
+        ? 'invert(1)'
+        : 'invert(0)'
+        };}
   color:${(props) =>
-    props.modo === 'night'
-    ? 'Black'
+    props.disabled === 'disabled'
+    ? 'var(--general80)'
     : 'var(--general30)'};
   background:${(props) =>
-    props.modo === 'night'
-    ? 'white'
+    props.disabled === 'disabled'
+    ? 'inherit'
     : 'var(--primary90)'
     }
 }}`
-const DivIcon = styled.div`
-width:25px;
-height:25px;
-background-image: url('./Icons/home.svg');
-background-repeat: no-repeat;
-background-size: 20px;
-`
-export { DivNav, DivNavItem, DivIcon, home, orders, products, categories, useralt, reports, coupon, apps, kb, update, user, settings }
+export { DivNav, DivNavItem, home, orders, products, categories, useralt, reports, coupon, apps, kb, update, user, settings }
