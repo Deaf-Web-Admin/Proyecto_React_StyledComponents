@@ -26,21 +26,18 @@ const user = usersvg
 const settings = settingssvg
 
 const DivNav = styled.div`
-width:310px;
-height:auto;
-margin:3px;
-border:0px;
-height:auto;
-display:flex;
-flex-direction:column;
-flex-wrap:nowrap;
-align-items:center;
-justify-content:center;
-background:${(props) =>
-  props.modo === 'night'
-  ? 'var(--general90)'
-  : 'var(--general30)'
-  };
+  width: 310px;
+  height: auto;
+  margin: 3px;
+  border: 0px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  background: ${(props) =>
+    props.modo === 'night' ? 'var(--general90)' : 'var(--general30)'};
 `
 
 const DivNavItem = styled.div`
@@ -54,45 +51,42 @@ gap:6px;
 padding:3px;
 
 align-items:${(props) =>
-props.disabled === 'disabled'
-? 'flex-end'
-: 'center'};
+  props.disabled === 'disabled' ? 'flex-end' : 'center'};
 
-font-style:${(props) =>
-  props.disabled === 'disabled'
-  ? 'italic'
-  : 'normal'};
+font-style:${(props) => (props.disabled === 'disabled' ? 'italic' : 'normal')};
 
-height:${(props) =>
-  props.disabled === 'disabled'
-  ? '40px'
-  : '30px'};
+height:${(props) => (props.disabled === 'disabled' ? '40px' : '30px')};
+filter:${(props) => (props.modo === 'night' ? 'invert(1)' : 'invert(0)')};
 
 color:${(props) =>
-    props.disabled === 'disabled'
+  props.disabled === 'disabled'
     ? 'var(--general80)'
-    : props.modo === 'night'
-    ? 'var(--general60)'
     : 'var(--general100)'};
 img{
   width:20px;
   height:20px;
-  filter:inherit;
 }  
   &:hover{
-img{      filter: ${(props) =>
-        props.modo === 'night'
-        ? 'invert(1)'
-        : 'invert(0)'
-        };}
+img{
+  filter: invert(1);}
   color:${(props) =>
-    props.disabled === 'disabled'
-    ? 'var(--general80)'
-    : 'var(--general30)'};
+    props.disabled === 'disabled' ? 'var(--general80)' : 'var(--general30)'};
   background:${(props) =>
-    props.disabled === 'disabled'
-    ? 'inherit'
-    : 'var(--primary90)'
-    }
+    props.disabled === 'disabled' ? 'inherit' : 'var(--primary90)'}
 }}`
-export { DivNav, DivNavItem, home, orders, products, categories, useralt, reports, coupon, apps, kb, update, user, settings }
+export {
+  DivNav,
+  DivNavItem,
+  home,
+  orders,
+  products,
+  categories,
+  useralt,
+  reports,
+  coupon,
+  apps,
+  kb,
+  update,
+  user,
+  settings
+}
